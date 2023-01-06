@@ -9,6 +9,10 @@ public class binarysearch {
 
 
         binarySearch(even, 6 , 20);
+        
+        binarySearch(odd, 5, 11);
+
+
     }
 
     public static void binarySearch(int arr[], int size , int key){
