@@ -8,7 +8,7 @@ public class binarysearch {
         int odd[] = {5,11,15,16,29};
 
 
-        binarySearch(even, 6 , 17);
+        binarySearch(even, 6 , 20);
     }
 
     public static void binarySearch(int arr[], int size , int key){
@@ -40,6 +40,11 @@ public class binarysearch {
             mid = (start + end)/2;
         }
 
+        if(arr[mid]!= key){
+            System.out.println("Not found");
+        }else{
+
         System.out.println(value);
+        }
     }
 }
