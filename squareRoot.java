@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class squareRoot {
     
-    public static int root(int arr[], int s , int e ,int n){
+    public static int root(double arr[], int s , int e ,int n){
 
 
     
@@ -12,7 +12,7 @@ public class squareRoot {
         int mid = (s+e)/2;
         
         while(s<=e){
-            int sq=arr[mid]*arr[mid];
+            double sq=arr[mid]*arr[mid];
            
             if(sq > n){
                 e= mid -1;
@@ -34,6 +34,26 @@ public class squareRoot {
 
         return ans;
     }
+
+    public static double incre(double arr[],int ans , int n){
+
+        double result = -1;
+        for(double i=0.1; i<1; i=i+0.1 ){
+
+            arr[ans]+=i;
+
+            double sq = arr[ans]*arr[ans];
+
+
+            if(sq<=n){
+
+                result = arr[ans];
+                
+            }
+            arr[ans] = arr[ans]-i;
+        }
+        return result;
+    }
     
     
     
@@ -46,7 +66,7 @@ public class squareRoot {
 
         int n = sc.nextInt();
 
-        int arr[] = new int [n+1];
+        double arr[] = new double [n+1];
 
         for (int i=0; i<= n; i++){
             arr[i]=i;
@@ -56,8 +76,12 @@ public class squareRoot {
         
 
         int p = root(arr, 0 , n, n );
+
+        double r = incre(arr, p , n);
+
+        System.out.println(r);
         
-        System.out.println(p);
+
 
     }
     
