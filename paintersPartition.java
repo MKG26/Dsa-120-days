@@ -25,7 +25,7 @@ public class paintersPartition {
     
     public static void main(String args[]){
 
-        int arr[]= {5, 5, 5, 5};
+        int arr[]= {5,5,5,5};
 
         int n= 4;
 
@@ -48,7 +48,7 @@ public class paintersPartition {
             if(isPossible(arr, n , m , mid)){
                 ans = mid;
 
-                e= mid -1;
+                e = mid-1;
             }
             else{
                 s = mid +1;
