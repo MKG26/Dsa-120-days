@@ -6,9 +6,9 @@ public class bubbleSorting {
         int arr[]= {10, 6 ,8 , 4 ,14, 60};
 
         int minIndex = 0;
-        for(int i=0 ; i<arr.length-1 ; i++){
+        for(int i=1 ; i<arr.length ; i++){
 
-            for(int j=0 ; j<arr.length-1 ; j++ ){
+            for(int j=0 ; j<arr.length-i ; j++ ){
                 int swap;
                 if(arr[j]> arr[j+1]){
                     minIndex = j+1;
