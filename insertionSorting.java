@@ -17,7 +17,7 @@ public class insertionSorting {
 
                         arr[j+1] = arr[j];
                     }else{
-                        break; 
+                        break;
                     }
                 }
                 arr[j+1]= temp;
