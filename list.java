@@ -15,5 +15,17 @@ public class list {
         arr.add(2, 5);
         
         System.out.println(arr);
+
+        List<Integer> newArr = new ArrayList();
+        
+            newArr.add(150);
+            newArr.add(160);
+
+            arr.addAll(newArr);
+
+
+           System.out.println(arr);
+
+            System.out.println(arr.get(2));
 }
 }
