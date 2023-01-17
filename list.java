@@ -2,7 +2,7 @@ import java.util.*;
 
 
 
-public class arrayListing2 {
+public class list {
 
     public static void main(String args[]){
             List<Integer> arr = new ArrayList();
@@ -11,7 +11,9 @@ public class arrayListing2 {
         arr.add(2);
         arr.add(3);
 
+        
+        arr.add(2, 5);
+        
         System.out.println(arr);
-    
 }
 }
