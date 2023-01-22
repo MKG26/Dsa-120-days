@@ -7,7 +7,7 @@ public class mergeSort {
 
         int arr2[] = {2,4,6};
 
-        int arr3[] = {0,0,0,0,0,0,0,0,0};
+        int arr3[] = new int[9];
 
 
         sort(arr1,6,arr2,3,arr3);
