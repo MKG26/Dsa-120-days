@@ -5,14 +5,17 @@ public class rotateArray {
         
         int arr[] = new int[4];
 
+       
         for(int i=0 ; i<4 ; i++){
-
-            if(i+2 >=4){
+            int k =0;
+            if(i+3 >=4 ){
                 
-                arr[i-2] = ar[i];
+                k=(i+3)%4 ;
+
+                arr[k]=ar[i];
 
             }else{
-                arr[i+2]= ar[i];
+                arr[i+3]= ar[i];
             }
         } 
 
