@@ -19,8 +19,10 @@ public class class2 {
             Clock clock = Clock.systemUTC();
 
 
-int j;
-int i;
+
+
+            int j;
+            int i;
     
             
         for(i=0 ; i<n-1; i++){
@@ -36,7 +38,7 @@ int i;
     
 
     
-               ;      
+               
     
     }
 }
