@@ -31,7 +31,7 @@ public static void main(String args[]){
 
         }
 
-        int maxi=-1, ans=0;
+        int maxi=0, ans=0;
 
         for(int i=0; i<26; i++){
             
