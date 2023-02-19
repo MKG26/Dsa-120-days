@@ -28,6 +28,8 @@ public class dublicates {
                 if(temp1 == temp2){
                     sub = s.substring(0,j)+s.substring(j+2,s.length());
                     s=sub;
+                    j--;
+                    
             }
         }
 
