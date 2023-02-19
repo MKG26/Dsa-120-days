@@ -8,7 +8,7 @@ public class dublicates {
     
         Scanner sc = new Scanner(System.in);
 
-        String s = new String("abby");
+        String s = sc.next();
 
 
         String s2 = new String();
@@ -29,7 +29,7 @@ public class dublicates {
             }
 
             
-
+            s=sub;
 
         }
 
