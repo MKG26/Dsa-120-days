@@ -11,30 +11,33 @@ public class dublicates {
         String s = sc.next();
 
 
-        String s2 = new String();
+
 
 
         String sub = new String();
 
-        for(int i=0; i<s.length()-1; i++){
+        for(int i=0; i<s.length(); i++){
             
-            char temp1 = s.charAt(i);
+           
 
-            char temp2 = s.charAt(i+1);
+            for(int j=0; j<s.length()-1; j++){
 
-            
-            if(temp1 == temp2){
-                    sub = s.substring(0,i)+s.substring(i+2,s.length());
-
+                char temp1 = s.charAt(j);
+                char temp2 = s.charAt(j+1);
+                
+                if(temp1 == temp2){
+                    sub = s.substring(0,j)+s.substring(j+2,s.length());
+                    s=sub;
             }
+        }
 
             
-            s=sub;
+
 
         }
 
 
-        System.out.println(sub);
+        System.out.println(s);
 
     
     }
