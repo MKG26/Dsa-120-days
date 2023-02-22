@@ -6,7 +6,7 @@ public class reverseWords {
     
         char a[] = {'t','h','e',' ','s','k','y',' ','i','s',' ','b','l','u','e'};
 
-            char test[]= new char[a.length+1];
+            char test[]= new char[a.length];
 
             int nnew = 0;
 
