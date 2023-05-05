@@ -34,14 +34,16 @@ public class _2d {
             //     System.out.println();
             // }
         
-                boolean ans =  isPresent(arr,45,3,4);
+                // boolean ans =  isPresent(arr,45,3,4);
 
-                if(ans == true){
-                    System.out.println("Element Found");
-                }
-                else{
-                    System.out.println("Not Found");
-                }
+                // if(ans == true){
+                //     System.out.println("Element Found");
+                // }
+                // else{
+                //     System.out.println("Not Found");
+                // }
+
+                    rowSum(arr,3,4);
 
             }        
     
@@ -59,5 +61,16 @@ public class _2d {
 
             return false;
 
+    }
+
+    public static void rowSum(int arr[][],int row,int col){
+
+        for(int i=0;i<row;i++){
+            int sum =0;
+            for(int j=0;j<col;j++){
+                sum += arr[i][j];
+            }
+                System.out.println(sum);
+        }
     }
 }
