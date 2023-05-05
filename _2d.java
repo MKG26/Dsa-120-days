@@ -27,21 +27,25 @@ public class _2d {
             // }
 
 
-            // for(int i=0; i<3; i++){
-            //     for(int j=0; j<4; j++){
-            //         System.out.print(arr[i][j]+" ");
-            //     }
-            //     System.out.println();
-            // }
+            for(int i=0; i<3; i++){
+                for(int j=0; j<4; j++){
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
         
-                // boolean ans =  isPresent(arr,45,3,4);
+                boolean ans =  isPresent(arr,45,3,4);
 
-                // if(ans == true){
-                //     System.out.println("Element Found");
-                // }
-                // else{
-                //     System.out.println("Not Found");
-                // }
+                if(ans == true){
+                    System.out.println();
+                    System.out.println("Element Found");
+                    System.out.println();
+                }
+                else{
+                    System.out.println();
+                    System.out.println("Not Found");
+                    System.out.println();
+                }
 
                     rowSum(arr,3,4);
 
