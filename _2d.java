@@ -36,7 +36,12 @@ public class _2d {
         
                 boolean ans =  isPresent(arr,45,3,4);
 
-                System.out.println(ans);
+                if(ans == true){
+                    System.out.println("Element Found");
+                }
+                else{
+                    System.out.println("Not Found");
+                }
 
             }        
     
