@@ -47,7 +47,9 @@ public class _2d {
                     System.out.println();
                 }
 
-                    rowSum(arr,3,4);
+                    int b = largestRowSum(arr,3,4);
+
+                    System.out.println(b);
 
             }        
     
@@ -76,5 +78,29 @@ public class _2d {
             }
                 System.out.println(sum);
         }
+    }
+
+    public static int largestRowSum(int arr[][], int row, int col){
+        
+        int val =0;
+        int roow =0;
+
+        for(int i=0; i<row; i++){
+            
+            int sum =0;
+
+            for(int j=0; j<col; j++){
+                sum += arr[i][j];
+            }
+
+            if(sum>val){
+                val=sum;
+                roow=row;
+            }
+        }
+
+        System.out.println(roow);
+
+        return val;
     }
 }
