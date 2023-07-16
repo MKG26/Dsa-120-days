@@ -7,7 +7,10 @@ public class practice {
 
         int b = a>>1;
 
-        System.out.println(b);
+        practice a1 = new practice();
+
+
+        System.out.println(a1);
     
     }    
 }
