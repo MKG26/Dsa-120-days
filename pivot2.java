@@ -26,7 +26,7 @@ public class pivot2 {
 
         int value = 0;
         while(start<=end){
-3);	printf("After sorting the elem")
+
             if(arr[mid] == key){
 
                 value = mid;
