@@ -20,12 +20,7 @@ public class d2 {
 
             System.out.println(max(arr));
 
-        
-        
-
-
-    
-    }   
+        }   
 
     static int[] search(int[][] arr, int target){
 
