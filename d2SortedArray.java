@@ -11,7 +11,7 @@ public class d2SortedArray {
             {13,23,33,43}
         };
 
-        System.out.println(Arrays.toString(search(arr,44)));
+        System.out.println(Arrays.toString(search(arr,43)));
 
     }
 
