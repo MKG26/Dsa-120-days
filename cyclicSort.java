@@ -4,7 +4,7 @@ public class cyclicSort {
     
     public static void main(String args[]){
     
-        int arr[] = {5,4,3,2,1};
+        int arr[] = {9,4,6,3,1,5,2,7,8};
 
         sort(arr);
 
@@ -34,6 +34,6 @@ public class cyclicSort {
 
         int temp = arr[first];
         arr[first] = arr[second];
-        arr[second] = temp;
+        arr[second] = temp; 
     }
 }
