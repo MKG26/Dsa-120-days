@@ -12,7 +12,7 @@ public class pattern {
 
     //         for(int col = 1; col<=row; col++){
 
-    //             System.out.print("* ");
+    //             System.out.print("*");
     //         }
 
     //         System.out.println();
@@ -85,24 +85,24 @@ public class pattern {
     // }
 
 
-        static void pattern6(int n){
+    //     static void pattern6(int n){
 
-        for(int row = 1; row<=n ; row++){
+    //     for(int row = 1; row<=n ; row++){
 
-            for(int col = n-row; col>0; col--){
+    //         for(int col = n-row; col>0; col--){
 
-                System.out.print(" ");
-            }
+    //             System.out.print(" ");
+    //         }
 
-            for(int ncol = row ; ncol >0; ncol--){
+    //         for(int ncol = row ; ncol >0; ncol--){
 
-                System.out.print("*");
-            }
+    //             System.out.print("*");
+    //         }
 
-            System.out.println();
-        }
+    //         System.out.println();
+    //     }
 
-    }
+    // }
 
     //     static void pattern7(int n){
 
@@ -138,10 +138,28 @@ public class pattern {
                 System.out.print("*");
             }
 
+
+
+                for(int col = 1; col < row ; col++){
+
+                    System.out.print("*");
+                }
+            
+
             System.out.println();
         }
 
+
+
+
+        
+
+    
+
+
+
     }
+
 
 
 
