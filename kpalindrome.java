@@ -1,7 +1,7 @@
 public class kpalindrome {
     public static void main(String args[]){
     
-        String a = " ";
+        String a = "";
 
 
 
