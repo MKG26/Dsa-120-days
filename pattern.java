@@ -2,7 +2,7 @@ public class pattern {
 
     public static void main(String args[]){
     
-        pattern16(4);
+        pattern16(5);
     
     }
 
@@ -414,10 +414,10 @@ public class pattern {
     // }
 
     static void pattern16(int n){
-        pattern g = new pattern();
+
         for(int row = 0; row<n ; row++){
 
-            for(int col = 4 ; col > 0 ; col--){
+            for(int col = n-row ; col > 0 ; col--){
 
                 System.out.print(" ");
 
@@ -425,10 +425,8 @@ public class pattern {
 
             for(int j = 0; j<= row; j++){
 
-                int x = factorial(row);
-                int y = factorial(row-j);
-                int z = factorial(j);
-                System.out.print(x/(y*z));
+         
+                System.out.print(factorial(row)/(factorial(row-j)*factorial(j))+" ");
             }
             System.out.println();
         }
@@ -438,7 +436,7 @@ public class pattern {
 
     public static int factorial(int n){
 
-        if(n == 1){
+        if(n == 0){
             return 1; 
         }
 
