@@ -18,9 +18,9 @@ public class solution2 {
         
         sort(nums);
         
-        int longest = 0;
+        int longest = 1;
         int lastSmaller = Integer.MIN_VALUE;
-        int count = 1;
+        int count = 0;
         
         for(int i=0; i<nums.length; i++){
 
