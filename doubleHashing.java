@@ -5,9 +5,9 @@ public class doubleHashing {
 
     public static void main(String args[]){
     
-        int arr[] = { 20,34,45,70,56};
+        int arr[] = { 20,34,45,70,56,41,13};
 
-        int N = 5;
+        int N = 7;
 
         int L = 11;
         int[] hash_code = new int[11];
@@ -34,7 +34,7 @@ public class doubleHashing {
             {
                 for(int j =0; j<tsize; j++ ){
 
-                    int t = 8 - (arr[i] % 8);
+                    int t = 7 - (arr[i] % 7);
 
                     int in = (hv + j*t) % tsize;
 
