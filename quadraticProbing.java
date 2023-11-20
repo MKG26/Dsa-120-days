@@ -52,3 +52,5 @@ public class quadraticProbing {
         System.out.println(Arrays.toString(arr));
     }
 }
+
+//[700, 50, 85, 92, 73, 101, 76]
