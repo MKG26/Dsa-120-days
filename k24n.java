@@ -1,0 +1,15 @@
+public class k24n {
+    
+    public static void main(String args[]){
+    
+        int n = 24;
+
+        if((n&1) == 1){
+            System.out.println("odd");
+        }
+        else{
+            System.out.println("even");
+        }
+    
+    }
+}
