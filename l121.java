@@ -9,16 +9,17 @@ public class l121 {
     public static int maxProfit(int[] prices) {
         
         int profit = 0;
+        int minValue = prices[0];
 
         for(int i= 1; i<prices.length; i++){
 
-            int minValue = minVal(prices, 0, i-1);
 
-            int max = prices[i] - minValue;
 
-            if(max> profit){
-                profit = max;
-            }
+            int cost = prices[i] - minValue;
+
+            profit = Math.max(cost,profit);
+
+            minValue = Math.min(minValue, prices[i]);
 
         }
 
@@ -26,20 +27,7 @@ public class l121 {
 
     }
 
-    static int minVal(int[] arr, int start, int end){
 
-        int min = arr[0];
-
-        for(int i=start ;i <= end ; i++){
-
-            if(min>arr[i]){
-
-                min = arr[i];
-            }
-        }
-
-        return min;
-    }
 
 
 }
