@@ -32,36 +32,20 @@ public class l2149 {
             }
         }
 
-        int[] ans = reAns(post, neg, nums.length);
+     
+        for(int i=0; i<nums.length/2; i++){
 
-        return ans;
+            nums[2*i] = post[i];
+
+            nums[(2*i)+1] = neg[i];
+        }
 
 
 
-
+        return nums;
         
     }
 
-    static int[] reAns(int[] post, int[] neg, int n){
 
-        int[] ans = new int[n];
-
-        int countP = 0;
-        int countN = 0;
-        
-        for(int i=0; i<n; i+=2){
-
-            ans[i] = post[countP++];
-        }
-
-        for(int i=1; i<n ; i+=2){
-
-            ans[i] = neg[countN++];
-        }
-
-        return ans;
-
-        
-    }
     
 }
