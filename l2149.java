@@ -13,36 +13,35 @@ public class l2149 {
     public static int[] rearrangeArray(int[] nums) {
         
 
-        int size = nums.length/2;
 
-        int post[] = new int[size];
 
-        int[] neg = new int[size];
+       
 
         int countP = 0;
-        int countN = 0;
+        int countN = 1;
+
+        int[] ans = new int[nums.length]; 
 
         for(int i=0; i<nums.length; i++){
 
             if(nums[i] > 0){
-                post[countP++] = nums[i];
+                ans[countP] = nums[i];
+                countP+=2;
             }
+
             else{
-                neg[countN++] = nums[i];
+                ans[countN] = nums[i];
+                countN+=2;
             }
+
         }
 
      
-        for(int i=0; i<nums.length/2; i++){
-
-            nums[2*i] = post[i];
-
-            nums[(2*i)+1] = neg[i];
-        }
 
 
 
-        return nums;
+
+        return ans;
         
     }
 
