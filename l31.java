@@ -1,88 +1,50 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class l31 {
     
     public static void main(String args[]){
-        
-        int[] arr = {1,2,3};
-
-        
-        recurPermute(arr);
-
-        System.out.println(recurPermute(arr));
-
     
+        int[] arr = {1,3,2};
+    
+        nextPermutation(arr);
     }
 
-     static List<Integer> recurPermute(int[] arr){
-
-        List<List<Integer>> list = new ArrayList<>();
-
-        List<Integer> ds = new ArrayList<>();
-
-        boolean freq[] = new boolean[arr.length];
-
-        nextPermute(arr, list , ds , freq);
-
-
-        return find(arr, list);
-
-    }
-
-    static void nextPermute(int[] arr, List<List<Integer>> list, List<Integer> ds, boolean[] freq){
-
-        if(ds.size() == arr.length){
-
-            list.add(new ArrayList<>(ds));
-            return;
-        }
-
-        for(int i=0; i<arr.length; i++){
-
-            if(!freq[i]){
-                freq[i] = true;
-                ds.add(arr[i]);
-                nextPermute(arr, list, ds, freq);
-                ds.remove(ds.size()-1);
-                freq[i] = false;
-            }
-        }
-
-
-
+    public static void nextPermutation(int[] nums) {
         
+        int index = -1;
+        int n = nums.length;
 
-    }
+        for(int i = n-2; i>=0 ; i-- ){
 
-    static List<Integer> find(int[] arr, List<List<Integer>> list){
+            if(nums[i] < nums[i+1]){
 
+                index = i;
+                break;
+            }
+        }
 
-    List<Integer> listt = new ArrayList<>();
+        for(int i= n-1; i>index; i--){
 
-        for(int i=0; i<arr.length; i++){
+            if(nums[index] < nums[i]){
 
-            listt.add(arr[i]);
+                swap(nums, index, i);
+                break;
+            }
         }
 
 
-
-        for(int i=0; i<list.size() ; i++){
-
-            if(listt.equals(list.get(i)) && i == list.size()-1){
-
-                return list.get(0);
-            }
-            else if(listt.equals(list.get(i))) {
-                return list.get(i+1);
-            }
-           }
-
-    return new ArrayList<>();
+        Arrays.sort(nums, index+1, n);
 
 
+        System.out.println(Arrays.toString(nums));
+    }
 
+    static void swap(int[] arr, int first, int sec){
 
-}
-
+        int temp = arr[first];
+        arr[first] = arr[sec];
+        arr[sec] = temp;
+    }
 }
