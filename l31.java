@@ -6,7 +6,7 @@ public class l31 {
     
     public static void main(String args[]){
     
-        int[] arr = {1,3,2};
+        int[] arr = {3,2,1};
     
         nextPermutation(arr);
     }
@@ -23,6 +23,13 @@ public class l31 {
                 index = i;
                 break;
             }
+        }
+
+        if(index == -1){
+
+            Arrays.sort(nums);
+            System.out.println(Arrays.toString(nums));
+            return;
         }
 
         for(int i= n-1; i>index; i--){
