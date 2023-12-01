@@ -21,7 +21,7 @@ public class prSubSumK {
     }
     
 
-    static void print(int index , int n, List<Integer> ds, int[] arr , int sum, int k){
+    static boolean print(int index , int n, List<Integer> ds, int[] arr , int sum, int k){
 
         
 
@@ -29,9 +29,10 @@ public class prSubSumK {
 
             if(sum == k){
                 System.out.println(ds);
+                return true;
             }
 
-            return;
+            return false;
         }
 
 
@@ -39,12 +40,18 @@ public class prSubSumK {
 
         sum += arr[index];
 
-        print(index+1, n, ds, arr, sum, k);
+        if(print(index+1, n, ds, arr, sum, k) == true){
+            return true;
+        }
 
         ds.remove(ds.size() - 1);
 
         sum -= arr[index];
 
-        print(index + 1, n, ds, arr, sum, k);
+        if(print(index + 1, n, ds, arr, sum, k) == true){
+            return true;
+        }
+
+        return false;
     }
 }
