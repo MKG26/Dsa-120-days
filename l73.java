@@ -12,7 +12,7 @@ public class l73 {
         
         setZeroes(arr);
 
-        minusOneToZero(arr);
+       
 
         for(int i=0; i<arr.length; i++){
 
