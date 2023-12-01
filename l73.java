@@ -12,6 +12,8 @@ public class l73 {
         
         setZeroes(arr);
 
+        minusOneToZero(arr);
+
         for(int i=0; i<arr.length; i++){
 
             for(int j=0; j<arr[0].length; j++){
@@ -31,22 +33,20 @@ public class l73 {
 
         for(int i=0; i<row; i++){
 
-            boolean test = true;
+
             for(int j=0; j<col; j++){
 
                 if(matrix[i][j] == 0){
 
                     rowZero(i,j,matrix);
                     colZero(i,j,matrix);
-                    test = false;
-                    break;
+
+
                     
                 }
             }
 
-                if(!test){
-                    break;
-                }
+              
         }
     }
 
@@ -54,7 +54,8 @@ public class l73 {
 
         for(int i=0; i<matrix[0].length; i++){
 
-            matrix[row][i] = 0;
+            if(matrix[row][i] >0)
+                matrix[row][i] = -1;
         }
 
 
@@ -64,10 +65,24 @@ public class l73 {
 
         for(int i=0; i<matrix.length; i++){
 
-            matrix[i][col] = 0;
+            if(matrix[i][col] >0)
+            matrix[i][col] = -1;
         }
 
 
+    }
+
+    static void minusOneToZero(int[][] matrix){
+
+        for(int i=0; i<matrix.length; i++){
+
+            for(int j=0; j<matrix[0].length; j++){
+
+                if(matrix[i][j] == -1){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
     }
     
 
