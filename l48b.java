@@ -38,7 +38,7 @@ public class l48b {
 
         int temp = matrix[r1][c1];
         matrix[r1][c1] = matrix[r2][c2];
-        matrix[r2][c2] = temp;
+        matrix[r2][c2] = temp; 
 
     }
 }
