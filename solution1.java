@@ -53,7 +53,7 @@ class solution1 {
  }
 
  if(test){
-    return s.charAt(0).toString;
+    return "t";
  }
 
  return r;
