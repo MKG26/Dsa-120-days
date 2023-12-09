@@ -69,12 +69,7 @@ public class l1011 {
         }
 
 
-
-        if(time <= days){
-            return true;
-        }
-
-        return false;
+        return time <= days;
     }
 
     private static int maxi(int[] weights) {
