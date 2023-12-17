@@ -59,7 +59,7 @@ public class indexSeqSearch {
             }
         }
 
-        for(int i=start; i<end ;i++){
+        for(int i=start; i<=end ;i++){
 
             if(num == arr[i]){
 
