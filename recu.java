@@ -14,7 +14,7 @@ public class recu {
             return;
         }
 
-        func(--temp);
+        func(--temp`);
     }
     
 }
