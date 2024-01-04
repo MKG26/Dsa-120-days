@@ -12,7 +12,6 @@ public class k28e {
 
         if(i == arr.length){
 
-
             return list;
         }
 
