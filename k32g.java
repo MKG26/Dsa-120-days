@@ -4,7 +4,7 @@ import java.util.List;
 public class k32g {
     public static void main(String[] args) {
 
-        List<List<Integer>> ans = subSeq(new int[]{1,2,3});
+        List<List<Integer>> ans = subSeq(new int[]{1,2,2});
 
         for(List<Integer> n:ans){
 
@@ -35,7 +35,7 @@ public class k32g {
 
             int n = outer.size();
 
-            for(int j=0;j<n;j++){
+            for(int j=start;j < n;j++){
 
                 List<Integer> internal = new ArrayList<>(outer.get(j));
                 internal.add(arr[i]);
