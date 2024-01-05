@@ -21,5 +21,5 @@ public class k33a {
             String s = p.substring(i, p.length());
             permutation(f + ch + s, up.substring(1));
         }
-    }
+    }3
 }
