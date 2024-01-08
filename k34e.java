@@ -5,7 +5,7 @@ public class k34e {
 
     public static void main(String[] args) {
 
-        System.out.println(dice("", 4));
+        System.out.println(dice("", 3));
     }
 
     static List<String> dice(String p, int target){
