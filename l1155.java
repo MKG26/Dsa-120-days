@@ -9,6 +9,7 @@ public class l1155 {
 
     public int numRollsToTarget(int n, int k, int target) {
 
+            return 1;
 
 
     }

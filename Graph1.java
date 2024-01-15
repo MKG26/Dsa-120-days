@@ -75,6 +75,5 @@ public class Graph1 {
                         + "(starting from vertex 2)");
 
         // Function call
-        g.DFS(2);
     }
 }
