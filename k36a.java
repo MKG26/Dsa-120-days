@@ -2,7 +2,7 @@ public class k36a {
 
     public static void main(String[] args) {
 
-        int n = 4;
+        int n = 5;
 
         boolean[][] board = new boolean[n][n];
 
