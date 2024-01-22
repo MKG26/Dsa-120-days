@@ -15,7 +15,7 @@ public class l1838 {
         int rigth = 0;
 
         int ans = 0;
-        long sum = nums[0];
+        long sum = 0;
 
         Arrays.sort(nums);
 
