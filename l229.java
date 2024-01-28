@@ -4,7 +4,7 @@ public class l229 {
 
     public static void main(String[] args) {
 
-        System.out.println(majorityElement(new int[]{3,2,3}));
+        System.out.println(majorityElement(new int[]{1,2}));
     }
 
     public static List<Integer> majorityElement(int[] nums) {
@@ -17,21 +17,30 @@ public class l229 {
 
         for(int i=0; i< nums.length; i++){
 
-            if(num.containsKey(nums[i])){
+            if(ans.size() == 0 || !ans.contains(nums[i])){
+                if (num.containsKey(nums[i])) {
 
-                num.put(nums[i], num.get(nums[i])+1);
+                    num.put(nums[i], num.get(nums[i]) + 1);
 
-                if(num.get(nums[i]) > n/3){
-                    ans.add(nums[i]);
+                    if (num.get(nums[i]) > n / 3) {
+                        ans.add(nums[i]);
+                    }
+                } else {
+                    num.put(nums[i], 1);
+                    if (n / 3 < num.get(nums[i])) {
+
+                        ans.add(nums[i]);
+                    }
                 }
-            }else{
-                num.put(nums[i], 1);
-                if(n/3< num.get(nums[i])){
 
-                    ans.add(nums[i]);
+                if (ans.size() == 2) {
+                    break;
                 }
             }
         }
+
+
+
 
         return ans;
 
