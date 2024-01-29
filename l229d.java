@@ -43,6 +43,8 @@ public class l229d {
             }
         }
 
+
+
          cnt1 = 0;
          cnt2 = 0;
 
