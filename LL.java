@@ -149,6 +149,47 @@ public class LL {
         return node;
     }
 
+    public int delete(int index){
+
+        if(index == 0){
+
+            return deleteFirst();
+
+        }
+
+        if (index == size - 1){
+
+            return deleteLast();
+        }
+
+        Node prev = get(index -1);
+
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+
+        return val;
+    }
+
+    public void find(int val){
+
+        Node node = head;
+
+        while(node != null){
+
+            if(node.value == val){
+                System.out.println("finded");
+                return;
+            }
+
+
+
+            node = node.next;
+        }
+
+        System.out.println("not find");
+    }
+
 
 
     public static void main(String[] args) {
@@ -178,8 +219,19 @@ public class LL {
 
         System.out.println(list.deleteLast());
 
+
         System.out.println();
 
         list.display();
+
+        System.out.println();
+
+        System.out.println(list.delete(1));
+
+        System.out.println();
+
+        list.display();
+
+        list.find(2);
     }
 }
