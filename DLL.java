@@ -2,6 +2,11 @@ public class DLL {
 
     Node head;
 
+    int size;
+
+    public DLL() {
+        this.size = 0;
+    }
 
     public class Node{
 
@@ -34,6 +39,8 @@ public class DLL {
         }
 
         head = node;
+
+        size++;
     }
 
     public void insertLast(int val){
@@ -49,6 +56,7 @@ public class DLL {
             node.prev = null;
             head = node;
 
+            size++;
             return;
         }
 
@@ -68,6 +76,7 @@ public class DLL {
         node.prev = last;
         last.next = node;
 
+        size++;
     }
 
     public void display(){
@@ -95,6 +104,73 @@ public class DLL {
         }
 
         System.out.println("null");
+
+        System.out.println();
+    }
+
+
+    public void insert(int val , int index){
+
+        if(index == 0){
+
+            insertFirst(val);
+            return;
+        }
+
+        if(index == size){
+
+            insertLast(val);
+            return;
+        }
+
+        Node node = new Node(val);
+
+        Node temp = head;
+
+        Node last = null;
+
+        for(int i=0; i< index ; i++){
+
+            last = temp;
+            temp = temp.next;
+        }
+
+        node.next = temp;
+        temp.prev = node;
+        node.prev = last;
+        last.next = node;
+
+        size++;
+
+    }
+
+    public void insertAfterNode(int val, int insertVal){
+
+        Node node = new Node(insertVal);
+
+        Node temp = head;
+
+        while(temp != null){
+
+            if(temp.value == val){
+
+                node.next = temp.next;
+
+                if(temp.next != null){
+                    temp.next.prev = node;
+                }
+
+
+                temp.next = node;
+                node.prev = temp;
+
+                size++;
+
+                return;
+
+            }
+                temp = temp.next;
+        }
     }
 
 
@@ -110,6 +186,14 @@ public class DLL {
         list.insertFirst(3);
 
         list.insertLast(6);
+
+        list.display();
+
+        list.insert(10, 1);
+
+        list.display();
+
+        list.insertAfterNode(4, 13);
 
         list.display();
     }
